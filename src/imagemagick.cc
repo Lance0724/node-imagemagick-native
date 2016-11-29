@@ -324,7 +324,7 @@ void DoConvert(uv_work_t* req) {
             }
 
             if (debug) printf( "resize to: %d, %d\n", resizewidth, resizeheight );
-            Magick::Geometry resizeGeometry( resizewidth, resizeheight, 0, 0, 0, 0 );
+            Magick::Geometry resizeGeometry( resizewidth, resizeheight );
             try {
                 image.zoom( resizeGeometry );
             }
