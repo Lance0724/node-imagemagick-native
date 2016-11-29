@@ -342,7 +342,7 @@ void DoConvert(uv_work_t* req) {
             if ( strcmp ( gravity, "None" ) != 0 ) {
                 // limit canvas size to cropGeometry
                 if (debug) printf( "crop to: %d, %d, %d, %d\n", width, height, xoffset, yoffset );
-                Magick::Geometry cropGeometry( width, height, xoffset, yoffset, 0, 0 );
+                Magick::Geometry cropGeometry( width, height, xoffset, yoffset);
 
                 Magick::Color transparent( "transparent" );
                 if ( strcmp( context->format.c_str(), "PNG" ) == 0 ) {
